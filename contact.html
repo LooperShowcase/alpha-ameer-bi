@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .caption-container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            color: white;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="contact.html">programs</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+
+
+
+   <div class="slideshow-container">
+    <div class="mySlides">
+        <img src="https://static.wixstatic.com/media/91df06_c8842b167b524c5ab5164b6445498e8d~mv2.jpg/v1/fill/w_1903,h_614,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/91df06_c8842b167b524c5ab5164b6445498e8d~mv2.jpg" alt="Image 1">
+    </div>
+    <div class="mySlides">
+        <img src="https://static.wixstatic.com/media/91df06_7b9c8e4c2c6b4a4593af63d82b790b9b~mv2.jpg/v1/fill/w_1903,h_891,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/91df06_7b9c8e4c2c6b4a4593af63d82b790b9b~mv2.jpg" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://static.wixstatic.com/media/91df06_29c44c4f52264c22b2b86ade33e3b33f~mv2.jpg/v1/fill/w_1903,h_891,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/91df06_29c44c4f52264c22b2b86ade33e3b33f~mv2.jpg" alt="Image 3">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+ 
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+</script>
+
+
+</body>
+</html>
